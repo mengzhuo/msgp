@@ -73,8 +73,16 @@ func (t Type) String() string {
 		return "ext"
 	case NilType:
 		return "nil"
-	default:
+	case Complex64Type:
+		return "complex64"
+	case Complex128Type:
+		return "complex128"
+	case TimeType:
+		return "time.Time"
+	case InvalidType:
 		return "<invalid>"
+	default:
+		return "<impossible>"
 	}
 }
 
